@@ -10,7 +10,7 @@
 namespace kiko {
 	CLASS_DEFINITION(Enemy)
 
-		bool Enemy::Initialize()
+	bool Enemy::Initialize()
 	{
 		Actor::Initialize();
 

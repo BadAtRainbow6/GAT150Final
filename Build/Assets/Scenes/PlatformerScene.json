@@ -125,9 +125,9 @@
       "m_name": "Player",
       "tag": "Player",
       "persistent": true,
-      "speed": 20,
-      "maxSpeed": 60,
-      "jump": 8,
+      "speed": 40,
+      "maxSpeed": 40,
+      "jump": 5.5,
       "transform": {
         "position": [ 400, 300 ],
         "scale": 1.0,
@@ -142,18 +142,18 @@
           "sequences": [
             {
               "name": "idle",
-              "fps": 12,
-              "numColumns": 8,
+              "fps": 10,
+              "numColumns": 10,
               "numRows": 1,
               "startFrame": 1,
-              "endFrame": 8,
-              "textureName": "coin.png"
+              "endFrame": 10,
+              "textureName": "_Run.png"
             }
           ]
         },
         {
           "type": "Box2DPhysicsComponent",
-          "damping": 0,
+          "damping": 0.4,
           "angularDamping": 2,
           "gravityScale": 1,
           "constrainAngle": true

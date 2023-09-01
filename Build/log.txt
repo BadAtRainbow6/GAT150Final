@@ -14,6 +14,8 @@ INFO: Main.cpp(26) hello world
 INFO: Factory.h(77) Prototype Class Registered: Crate
 INFO: Factory.h(77) Prototype Class Registered: tile01
 INFO: Factory.h(77) Prototype Class Registered: tile02
+INFO: Factory.h(77) Prototype Class Registered: tile03
+INFO: Factory.h(77) Prototype Class Registered: tile04
 INFO: EventManager.cpp(15) Event Subscribed: AddPoints
 INFO: EventManager.cpp(15) Event Subscribed: OnPlayerDead
 INFO: EventManager.cpp(15) Event Subscribed: AddPoints

@@ -59,6 +59,64 @@
 			]
 		},
 		{
+			"type": "Actor",
+			"m_name": "tile03",
+			"tag": "Spring",
+			"prototype": true,
+			"transform": {
+				"scale": 2
+			},
+			"components": [
+				{
+					"type": "SpriteComponent",
+					"textureName": "textures/tiles.png",
+					"source": [
+						448,
+						192,
+						32,
+						32
+					]
+				},
+				{
+					"type": "Box2DPhysicsComponent",
+					"isDynamic": false
+				},
+				{
+					"type": "Box2DCollisionComponent",
+					"restitution": 0
+				}
+			]
+		},
+		{
+			"type":"Actor",
+			"m_name":"tile04",
+			"tag":"Honey",
+			"prototype":true,
+			"transform":{
+				"scale": 2
+			},
+			"components":[
+				{
+					"type":"SpriteComponent",
+					"textureName":"textures/tiles.png",
+					"source":[
+						192,
+						384,
+						32,
+						32
+					]
+				},
+				{
+					"type":"Box2DPhysicsComponent",
+					"isDynamic":false
+				},
+				{
+					"type":"Box2DCollisionComponent",
+					"restitution":0
+				}
+			]
+		},
+		{
 			"type":"Actor",
 			"name":"World",
 			"transform":{
@@ -73,16 +131,16 @@
 					"numColumns": 13,
 					"numRows": 10,
 					"size": [64, 64],
-					"tileNames": ["", "tile01", "tile02"],
+					"tileNames": ["", "tile01", "tile02", "tile03", "tile04"],
 					"tiles": [
 							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 4, 4, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0,
 							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 							0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0,
 							2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2,
-							0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+							0, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0, 0,
 							1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 							1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 							]

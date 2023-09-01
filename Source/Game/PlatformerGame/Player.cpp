@@ -34,7 +34,7 @@ namespace kiko {
 		//transform.rotation += rotate * m_turnRate * kiko::g_time.GetDeltaTime();
 
 		if (dir != 0) {
-			velocity.x += speed * dir * ((onGround) ? 1 : 0.25f) * dt;
+			velocity.x += speed * dir * ((onGround) ? 1 : .8) * dt;
 			velocity.x = Clamp(velocity.x, -maxSpeed, maxSpeed);
 			m_physicsComponent->SetVelocity(velocity);
 		}
@@ -63,13 +63,20 @@ namespace kiko {
 	void Player::OnCollissionEnter(Actor* other)
 	{
 		if (other->tag == "Ground") groundCount++;
-		
+		if (other->tag == "Spring") m_physicsComponent->SetVelocity(vec2{ 0, 35 });
+		if (other->tag == "Honey") {
+			m_physicsComponent->m_damping = 0.7f;
+			groundCount--;
+		}
 	}
 
 	void Player::OnCollissionExit(Actor* other)
 	{
 		if (other->tag == "Ground") groundCount--;
-
+		if (other->tag == "Honey") { 
+			m_physicsComponent->m_damping = 0.4f; 
+			groundCount++;
+		}
 	}
 
 	void Player::Read(const json_t& value) {
