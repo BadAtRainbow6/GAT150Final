@@ -1,0 +1,169 @@
+{
+  "actors": [
+    {
+      "type": "Actor",
+      "m_name": "Background",
+      "persistent": true,
+      "transform": {
+        "position": [ 400, 300 ],
+        "scale": 0.9,
+        "rotation": 0
+      },
+      "components": [
+        {
+          "type": "SpriteComponent",
+          "textureName": "Textures/background.png"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "m_name": "Title",
+      "persistent": true,
+      "transform": {
+        "position": [ 400, 300 ],
+        "scale": 2,
+        "rotation": 0
+      },
+      "components": [
+        {
+          "type": "TextRenderComponent",
+          "fontName": "BlackHanSans-Regular.ttf",
+          "fontSize": 24,
+          "color": [ 1, 0, 0, 1 ],
+          "text": "Place Holder"
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "m_name": "Coin",
+      "persistent": true,
+      "transform": {
+        "position": [ 100, 300 ],
+        "scale": 1.0,
+        "rotation": 0
+      },
+      "components": [
+        {
+          "type": "SpriteAnimRenderComponent",
+          "defaultSequenceName": "idle",
+          "sequences": [
+            {
+              "name": "idle",
+              "fps": 12,
+              "numColumns": 8,
+              "numRows": 1,
+              "startFrame": 1,
+              "endFrame": 8,
+              "textureName": "coin.png"
+            }
+          ]
+        },
+        {
+          "type": "Box2DPhysicsComponent",
+          "damping": 0,
+          "angularDamping": 2,
+          "gravityScale": 0,
+          "constrainAngle": true
+        },
+        {
+          "type": "Box2DCollisionComponent",
+          "resitution": 1
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "m_name": "Crate",
+      "tag": "Ground",
+      "prototype" :  true,
+      "persistent": true,
+      "transform": {
+        "position": [ 320, 300 ],
+        "scale": 1.0,
+        "rotation": 0
+      },
+      "components": [
+        {
+          "type": "SpriteComponent",
+          "textureName": "Textures/crate.png"
+        },
+        {
+          "type": "Box2DPhysicsComponent"
+        },
+        {
+          "type": "Box2DCollisionComponent",
+          "resitution": 0.1
+        }
+      ]
+    },
+    {
+      "type": "Actor",
+      "tag": "Ground",
+      "persistent": true,
+      "transform": {
+        "position": [
+          700,
+          520
+        ]
+      },
+      "components": [
+        {
+          "type": "Box2DPhysicsComponent",
+          "isDynamic": false,
+          "constrainAngle": true
+        },
+        {
+          "type": "Box2DCollisionComponent",
+          "size": [ 1400, 20 ]
+        }
+      ]
+    },
+    {
+      "type": "Player",
+      "m_name": "Player",
+      "tag": "Player",
+      "persistent": true,
+      "speed": 20,
+      "maxSpeed": 60,
+      "jump": 8,
+      "transform": {
+        "position": [ 400, 300 ],
+        "scale": 1.0,
+        "rotation": 0
+      },
+      "components": [
+        {
+          "type": "SpriteAnimRenderComponent",
+          "defaultSequenceName": "idle",
+          "source": [0,0,16,35],
+          "origin": [ 0.5, 1 ],
+          "sequences": [
+            {
+              "name": "idle",
+              "fps": 12,
+              "numColumns": 8,
+              "numRows": 1,
+              "startFrame": 1,
+              "endFrame": 8,
+              "textureName": "coin.png"
+            }
+          ]
+        },
+        {
+          "type": "Box2DPhysicsComponent",
+          "damping": 0,
+          "angularDamping": 2,
+          "gravityScale": 1,
+          "constrainAngle": true
+        },
+        {
+          "type": "Box2DCollisionComponent",
+          "resitution" :  0
+        }
+      ]
+    }
+
+  ]
+}

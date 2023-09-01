@@ -1,0 +1,130 @@
+{
+	"actors":[
+		{
+			"type": "Actor",
+			"m_name": "Background",
+			"persistent": true,
+			"transform": {
+				"position": [ 400, 300 ],
+				"scale": 1.0,
+				"rotation": 0
+			},
+			"components": [
+				{
+					"type": "SpriteComponent",
+					"textureName": "space.png"
+				}
+			]
+		},
+		{
+			"type": "Weapon",
+			"m_name": "Rocket",
+			"prototype": true,
+			"lifespan": 1,
+			"tag": "Player",
+			"transform": {
+				"position": [ 400, 300 ],
+				"scale": 1.0,
+				"rotation": 0
+			},
+			"speed": 10,
+			"components": [
+				{
+					"type": "SpriteComponent",
+					"textureName": "rocket.png"
+				},
+				{
+					"type": "Box2DPhysicsComponent",
+					"damping": 0.98,
+					"angularDamping": 2,
+					"gravityScale": 0
+				},
+				{
+					"type": "Box2DCollisionComponent",
+					"size": [ 32, 32 ],
+					"isTrigger": false,
+					"constrainAngle":  true
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"m_name": "Title",
+			"persistent": true,
+			"transform": {
+				"position": [ 400, 300 ],
+				"scale": 2,
+				"rotation": 0
+			},
+			"components": [
+				{
+					"type": "TextRenderComponent",
+					"fontName": "BlackHanSans-Regular.ttf",
+					"fontSize": 24,
+					"text": "ASTEROIDZ"
+				}
+			]
+		},
+		{
+			"type": "Player",
+			"m_name": "Player",
+			"prototype": true,
+			"tag": "Player",
+			"transform": {
+				"position": [ 400, 300 ],
+				"scale": 2,
+				"rotation": 0
+			},
+			"speed": 10,
+			"turnRate": 3.0,
+			"components": [
+				{
+					"type": "SpriteComponent",
+					"textureName": "rocket.png"
+				},
+				{
+					"type": "Box2DPhysicsComponent",
+					"damping": 0.98,
+					"angularDamping": 2,
+					"gravityScale": 0
+				},
+				{
+					"type": "Box2DCollisionComponent",
+					"size": [ 32, 32 ],
+					"isTrigger": false
+				}
+			]
+		},
+		{
+			"type": "Enemey",
+			"m_name": "Enemey",
+			"prototype": true,
+			"tag": "Enemey",
+			"transform": {
+				"position": [ 400, 300 ],
+				"scale": 0.1,
+				"rotation": 0
+			},
+			"speed": 0.1,
+			"turnRate": 0.5,
+			"components": [
+				{
+					"type": "SpriteComponent",
+					"textureName": "enemy.png"
+				},
+				{
+					"type": "Box2DPhysicsComponent",
+					"damping": 0.98,
+					"angularDamping": 2,
+					"gravityScale": 0
+				},
+				{
+					"type": "Box2DCollisionComponent",
+					"size": [ 32, 32 ],
+					"isTrigger":  false
+				}
+			]
+		}
+
+	]
+}
